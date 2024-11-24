@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer async></script>
+    <link rel="icon" href="../pics/favicon-32x32.png">
+</head>
+<body>
+    <div class="mainbox" id="mainbox">
+        <div class="left-mainbox" id="left-mainbox">
+            <h2 class="calc">Mortgage Calculator <button class="clear-all" id="clear-button">Clear All</button></h2>
+            <p class="amount">Mortgage Amount</p>
+            <input type="number" class="number-input" id="total-mortgage" required><span class="dollar-sign">$</span>
+            <p class="term">Mortgage Term <span class="interest-rate">Interest Rate</span></p>
+            <input type="number" class="years" id="years"> <span class="years-span">Years</span> <input type="number" class="percent" id="percent"> <span class="percent-sign">%</span>
+            <p class="type">Mortgage Type</p>
+            <form>
+                <div class="border-box1">
+                <input type="radio" id="repayment" name="radio">
+                <label for="repayment" class="radio-button1">Repayment</label><br>
+                </div>
+                <div class="border-box2">
+                <input type="radio" id="interest" name="radio">
+                <label for="interest" class="radio-button2">Interest Only</label>
+                </div>
+            </form>
+                <button class="calc-button" id="calc-button"><img src="icon-calculator.svg" alt="calculator" class="calc-img">Calculate Repayments</button>
+        </div>   
+
+        <div class="right-mainbox" id="right-mainbox">
+            <div id="right-div-display" class="pre-results">
+            <img src="illustration-empty.svg" alt="image" class="results-img">
+            <h3 class="results-h3">Results Shown here</h3>
+            <p class="results-p">Complete the form and click "calculate repayments" to see what your monthly repayment would be.</p>
+            </div>
+            <div class="results-div" id="results-div">
+                <h2 class="display-none" id="result-title">Your results</h2>
+                <p class="display-none" id="result-info">your results are shown below based on the information you provided.
+                    To adjust the results, edit the form and click "calculate repayment" again.
+                </p>
+                <div class="display-none" id="result-payment">
+                    <p class="result-total" id="result-total"></p>
+                    <p class="total-payment" id="total-payment"></p>
+                    <hr class="result-underline">
+                    <p class="interestPlusMortgageInfo" id="interestPlusMortgageInfo"></p>
+                    <p class="interestPlusMortgage" id="interest+Mortgage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Total you'll repay over the term -->
